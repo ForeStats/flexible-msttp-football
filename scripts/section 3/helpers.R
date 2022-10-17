@@ -3,8 +3,8 @@
 ##
 ## Author: Santhosh Narayanan
 ## Date: 16 Oct 2022
-## Licence: GPL 2 or greater
-## NOT A POLISHED PIECE OF PUBLIC-USE SOFTWARE! Provided "as is"
+## Licence: GPL 3
+## NOT A POLISHED PIECE OF PUBLIC-USE SOFTWARE! PROVIDED "AS IS"
 ## NO WARRANTY OF FITNESS FOR ANY PURPOSE!
 
 ## Helper functions for Section 3
