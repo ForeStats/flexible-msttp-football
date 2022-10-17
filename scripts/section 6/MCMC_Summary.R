@@ -61,7 +61,7 @@ summary.fit <- data.frame(cbind(
 
 row.names(summary.fit) <- pars_oi
 
-# Table 8
+# Table 6
 print.ind <- c(14, 65, 108, 141, 248, 275, 314, 365, 508, 541, 748, 775, 907, 908, 909, 991, 1038, 1039)
 kable(
   round(summary.fit[print.ind, c(1, 2, 5, 7)], 2),
@@ -74,7 +74,7 @@ kable(
 par.means <- colMeans(samples)
 par.sd    <- apply(samples, 2, sd)
 
-# Table 12
+# Table 8
 delta.mean <- t(matrix(par.means[(9*B1+1):(9*B1+(3*M))], nrow = 3))
 delta.mean[delta.mean < 0.01] <- 0
 delta.mean <- round(delta.mean, 2)
@@ -166,7 +166,6 @@ row.names(gamma_par) = colnames(gamma_par) = mark_levels
 kbl(gamma_par, booktabs = TRUE, caption = "My table", align = "c", 'latex') %>% 
   kable_styling(latex_options = c("scale_down")) %>% row_spec(0, angle = 90)
 
-# Figure 13
 my.mat <- gamma_post_means_zone_2
 colnames(my.mat) <- row.names(my.mat) <- mark_levels
 plot.ind <- c(1,3,9)
@@ -535,7 +534,7 @@ p18 = prior.post.plot(post_plot_data = data.frame(value = samples[, print.ind[18
                       xlims = c(0, 1),
                       do = do)
 
-# Figure 8
+# Figure 6
 figure = ggarrange(p1, p2, p3, p4, p5, p6, p7, p8,
                    p9, p10, p11, p12, p13, p14, p15, p16, p17, p18,
                    ncol=6, nrow=3, common.legend = TRUE, legend="top")
@@ -563,7 +562,7 @@ hdr(gamma_par[63,] - gamma_par[528,], prob = seq(50, 100, 1))$hdr
 mean(gamma_par[63,] - gamma_par[528,])
 hist(gamma_par[63,] - gamma_par[528,], n = 50)
 
-## Figure 17 - Branching structure plot
+## Figure 10 - Branching structure plot
 
 # Prepare params with thinning
 M <- 30
