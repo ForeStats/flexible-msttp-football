@@ -1,13 +1,19 @@
-pmset -g
-sudo pmset -a disablesleep 1
-sudo pmset -a disablesleep 0
+## Distributed as part of the supporting materials for the manuscript
+## "Flexible marked spatio-temporal point processes with applications to event sequences from association football"
+##
+## Author: Santhosh Narayanan
+## Date: 16 Oct 2022
+## Licence: GPL 3
+## NOT A POLISHED PIECE OF PUBLIC-USE SOFTWARE! PROVIDED "AS IS"
+## NO WARRANTY OF FITNESS FOR ANY PURPOSE!
+
+## HMC sampling via stan
 
 library(cmdstanr)
 library(posterior)
 library(bayesplot)
 color_scheme_set("brightblue")
 
-setwd("~/Documents/PhD/Stan/teamsHistory")
 model.stan <- cmdstan_model("model.stan", cpp_options = list(stan_threads = TRUE))
 
 source("data_file.R")
@@ -41,7 +47,7 @@ fit <- model.stan$sample(my_dat,
                          seed = 123,
                          refresh = 10,
                          init = list(init_dat),
-                         output_dir = '~/Documents/PhD/Stan/teamsHistory',
+                         output_dir = '~/Documents/PhD/Stan/teams',
                          chains = 1,
                          parallel_chains = 1,
                          threads_per_chain = 15,
@@ -49,10 +55,7 @@ fit <- model.stan$sample(my_dat,
                          iter_sampling = 500,
                          save_warmup = TRUE)
 
-save.image("workspace_teams.RData")
-
 fit$save_object(file = "fit.RDS")
-#fit2 <- readRDS("fit.RDS")
 
 summary.df <- fit$summary()
 
@@ -79,7 +82,7 @@ fit_resume <- model.stan$sample(my_dat,
                                 seed = 1234,
                                 refresh = 10,
                                 init = rep(list(init_dat), 3),
-                                output_dir = '~/Documents/PhD/Stan/teamsHistory',
+                                output_dir = '~/Documents/PhD/Stan/teams',
                                 chains = 3,
                                 parallel_chains = 3,
                                 threads_per_chain = 5,

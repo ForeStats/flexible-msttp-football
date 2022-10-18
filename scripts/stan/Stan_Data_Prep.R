@@ -1,21 +1,20 @@
-# Stuff to load R
-module purge
-module load intel GCC
-source $HOME/.cshrc
-R
-# 
-cd cmdstan
-make football/model
-cd football
-sbatch tinis.sbatch
-squeue -u strjjc
+## Distributed as part of the supporting materials for the manuscript
+## "Flexible marked spatio-temporal point processes with applications to event sequences from association football"
+##
+## Author: Santhosh Narayanan
+## Date: 16 Oct 2022
+## Licence: GPL 3
+## NOT A POLISHED PIECE OF PUBLIC-USE SOFTWARE! PROVIDED "AS IS"
+## NO WARRANTY OF FITNESS FOR ANY PURPOSE!
+
+## Script to prepare the input data and initialisations for HMC sampling via stan
 
 library(rstan)
 library(data.table)
 rstan_options(auto_write = TRUE)
 
-#####
-load("~/Documents/PhD/Stan/teamsHistory/matchData.RData")
+## Screening procedure based on Association Rules
+load("Section6/Model_5_100_teams/matchData.RData")
 
 G = 40
 data_season_1 <- data_season_1[game %in% 1:G]
@@ -149,12 +148,11 @@ beta_atk <- beta_melt[[3]]
 B1 = nrow(beta_def)
 B2 = nrow(beta_def[beta_def$Var2 < 15,])
 B1 == B2
-#####
+## END Screening
 
 #Data set up
 #Load data
-setwd("~/Documents/PhD/Stan/teamsHistory")
-load("~/Documents/PhD/Stan/teamsHistory/matchData_10.RData")
+load("Section6/Model_5_100_teams/matchData.RData")
 G = 40
 
 meta <- data.table(expand.grid(game = as.factor(1:380), period = as.factor(1:2)))
