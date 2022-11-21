@@ -13,7 +13,34 @@ from association football". The arXiv link to the paper is [here](https://arxiv.
 
 The raw data that motivated our work has been provided by Stratagem Technologies Ltd and consists 
 of all touch-ball events for the 2013/14 season of the English Premier League. The raw data cannot 
-be disclosed as the authors do not have the license to do so. We provide guidance on how the code 
-can be used to apply our methods to similar data sets, like the publicly-available 2020/21 FA Women's 
-Super League Data provided by StatsBomb Inc. available [here](https://github.com/statsbomb/open-data).
+be disclosed as the authors do not have the license to do so. However, the code can be used to apply 
+our methods to similar data sets, like the publicly-available 2020/21 FA Women's Super League Data 
+provided by StatsBomb Inc. available [here](https://github.com/statsbomb/open-data).
 
+## Data format
+
+Our methods provide a general framework to analyse marked spatio-temporal event sequences.
+
+```{=latex}
+\begin{center}
+\begin{tabular}{rrrrrrrrr}
+  \toprule
+i & id & period & team\_id & time ($t_i$) & zone ($z_i$) & mark ($m_i$)\\ 
+  \midrule
+1 &  101 & 1 & 1 & 0 & 2 & Away\_Pass\_S \\ 
+2 &  101 & 1 & 1 & 1 & 2 & Away\_Pass\_U \\ 
+3 &  101 & 1 & 2 & 3 & 1 & Home\_Clear \\ 
+4 &  101 & 1 & 1 & 6 & 3 & Away\_Win  \\ 
+5 &  101 & 1 & 1 & 8 & 3 & Away\_Pass\_S  \\ 
+6 &  101 & 1 & 1 & 15 & 2 & Away\_Pass\_S  \\ 
+7 &  101 & 1 & 1 & 16 & 1 & Away\_Pass\_U \\ 
+8 &  101 & 1 & 2 & 19 & 1 & Home\_Out\_Throw \\ 
+   \bottomrule
+\end{tabular}
+\end{center}
+```
+
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |

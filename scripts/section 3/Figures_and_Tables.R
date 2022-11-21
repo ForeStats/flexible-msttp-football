@@ -131,7 +131,8 @@ ecdfplot(
     gp = gpar(fontfamily = "CMU Serif", fontsize = 20)
   ),
   xlim = c(-1, 10),
-  lwd = 1.2,
+  lwd = 2,
+  alpha = 0.5,
   auto.key = list(
     text = c(
       'Poisson process',
