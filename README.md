@@ -19,7 +19,10 @@ provided by StatsBomb Inc. available [here](https://github.com/statsbomb/open-da
 
 ## Data format
 
-Our methods provide a general framework to analyse marked spatio-temporal event sequences.
+Our methods provide a general framework to analyse marked spatio-temporal event sequences where 
+events are charaterised by their occurrence times (t\_i), locations (z\_i), and marks (m\_i). In 
+applications like football, we also have the team information and the game period in addition to 
+the core dimensions. The expected data structure is given below
 
 | id | period | team\_id | time (t\_i) | zone (z\_i) | mark (m\_i) |
 | --- | --- | --- | --- | --- | --- |
@@ -31,4 +34,3 @@ Our methods provide a general framework to analyse marked spatio-temporal event 
 |  101 | 1 | 1 | 15 | 2 | Away\_Pass\_S |
 |  101 | 1 | 1 | 16 | 1 | Away\_Pass\_U |
 |  101 | 1 | 2 | 19 | 1 | Home\_Out\_Throw |
-
