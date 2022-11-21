@@ -21,7 +21,7 @@ provided by StatsBomb Inc. available [here](https://github.com/statsbomb/open-da
 
 Our methods provide a general framework to analyse marked spatio-temporal event sequences.
 
-| id | period | team\_id | time ($t_i$) | zone ($z_i$) | mark ($m_i$) |
+| id | period | team\_id | time (t\_i) | zone (z\_i) | mark (m\_i) |
 | --- | --- | --- | --- | --- | --- |
 |  101 | 1 | 1 | 0 | 2 | Away\_Pass\_S |
 |  101 | 1 | 1 | 1 | 2 | Away\_Pass\_U |
@@ -31,3 +31,4 @@ Our methods provide a general framework to analyse marked spatio-temporal event 
 |  101 | 1 | 1 | 15 | 2 | Away\_Pass\_S |
 |  101 | 1 | 1 | 16 | 1 | Away\_Pass\_U |
 |  101 | 1 | 2 | 19 | 1 | Home\_Out\_Throw |
+
