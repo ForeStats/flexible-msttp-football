@@ -22,7 +22,8 @@ provided by StatsBomb Inc. available [here](https://github.com/statsbomb/open-da
 Our methods provide a general framework to analyse marked spatio-temporal event sequences.
 
 ```{=latex}
-\begin{center}
+\begin{table}
+\centering
 \begin{tabular}{rrrrrrrrr}
   \toprule
 i & id & period & team\_id & time ($t_i$) & zone ($z_i$) & mark ($m_i$)\\ 
@@ -37,7 +38,7 @@ i & id & period & team\_id & time ($t_i$) & zone ($z_i$) & mark ($m_i$)\\
 8 &  101 & 1 & 2 & 19 & 1 & Home\_Out\_Throw \\ 
    \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 ```
 
 | Command | Description |
