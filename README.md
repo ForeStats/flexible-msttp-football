@@ -21,27 +21,13 @@ provided by StatsBomb Inc. available [here](https://github.com/statsbomb/open-da
 
 Our methods provide a general framework to analyse marked spatio-temporal event sequences.
 
-```{=latex}
-\begin{table}
-\centering
-\begin{tabular}{rrrrrrrrr}
-  \toprule
-i & id & period & team\_id & time ($t_i$) & zone ($z_i$) & mark ($m_i$)\\ 
-  \midrule
-1 &  101 & 1 & 1 & 0 & 2 & Away\_Pass\_S \\ 
-2 &  101 & 1 & 1 & 1 & 2 & Away\_Pass\_U \\ 
-3 &  101 & 1 & 2 & 3 & 1 & Home\_Clear \\ 
-4 &  101 & 1 & 1 & 6 & 3 & Away\_Win  \\ 
-5 &  101 & 1 & 1 & 8 & 3 & Away\_Pass\_S  \\ 
-6 &  101 & 1 & 1 & 15 & 2 & Away\_Pass\_S  \\ 
-7 &  101 & 1 & 1 & 16 & 1 & Away\_Pass\_U \\ 
-8 &  101 & 1 & 2 & 19 & 1 & Home\_Out\_Throw \\ 
-   \bottomrule
-\end{tabular}
-\end{table}
-```
-
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| id | period | team\_id | time ($t_i$) | zone ($z_i$) | mark ($m_i$) |
+| --- | --- | --- | --- | --- | --- |
+|  101 | 1 | 1 | 0 | 2 | Away\_Pass\_S |
+|  101 | 1 | 1 | 1 | 2 | Away\_Pass\_U |
+|  101 | 1 | 2 | 3 | 1 | Home\_Clear |
+|  101 | 1 | 1 | 6 | 3 | Away\_Win | 
+|  101 | 1 | 1 | 8 | 3 | Away\_Pass\_S |
+|  101 | 1 | 1 | 15 | 2 | Away\_Pass\_S |
+|  101 | 1 | 1 | 16 | 1 | Away\_Pass\_U |
+|  101 | 1 | 2 | 19 | 1 | Home\_Out\_Throw |
